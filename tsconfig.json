@@ -19,10 +19,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    // "paths": {
-    //   "src/*": ["./src/*"],
-    //   "assets/*": ["./src/assets/*"],
-    // }
+    "paths": {
+      "src/*": ["./src/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "constants/*": ["./src/constants/*"],
+      
+    }
   },
   "include": [
     "src"
