@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path={ROUTES.HOME} element={<HomePage />} />
-      <Route path={ROUTES.RESULT + ':word'} element={<ResultPage />} />
+      <Route path={ROUTES.RESULT + ':searchWord'} element={<ResultPage />} />
       {/* <Route path={ROUTES.NOT_FOUND} element={<NotFound />} /> */}
     </Routes>
   );
