@@ -8,6 +8,8 @@ import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 
+import { Typography } from '@mui/material';
+
 import './HomePage.css';
 
 const HomePage: FC = () => {
@@ -24,6 +26,20 @@ const HomePage: FC = () => {
     <div className="HomePageWrapper">
       <Box sx={{ marginTop: '20px' }}>
         <Box>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            sx={{
+              display: 'flex',
+              width: '100%',
+              gap: '10px',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            Welcome to the dictionary
+          </Typography>
           <TextField
             id="outlined-basic"
             label="Enter the word"

@@ -1,22 +1,13 @@
 import React, { FC, useEffect } from 'react';
-import { useAppDispatch } from '../../../hooks/useAppDispatch';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../../hooks/useAppDispatch';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 import { fetchWord } from '../../../store/reducers/ActionCreators';
+
+import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
-
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Container,
-  Button,
-} from '@mui/material';
-
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
-import { useAppSelector } from '../../../hooks/useAppSelector';
 
 import ROUTES from '../../../constants/routes';
 
@@ -24,8 +15,9 @@ import './ResultPage.css';
 
 const ResultPage: FC = () => {
   const dispatch = useAppDispatch();
-  const { searchWord } = useParams();
   const history = useNavigate();
+
+  const { searchWord } = useParams();
 
   const { words, isLoading, error } = useAppSelector(
     (state) => state.wordReducer,
